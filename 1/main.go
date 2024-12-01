@@ -11,8 +11,12 @@ import (
 
 func main() {
 	fmt.Println("Solution for Day 1")
+
 	solutionA := solutionA()
 	fmt.Println("Solution A:", solutionA)
+
+	solutionB := solutionB()
+	fmt.Println("Solution B:", solutionB)
 }
 
 func solutionA() int {
@@ -48,6 +52,47 @@ func solutionA() int {
 		rightItem := right[i]
 		dist := int(math.Abs(float64(leftItem) - float64(rightItem)))
 		solution += dist
+	}
+
+	return solution
+}
+
+func solutionB() int {
+	var solution int = 0
+
+	var left []int
+	var right []int
+
+	lines, err := utils.ReadLinesFromFile("1/b.txt")
+	if err != nil {
+		fmt.Println("Error:", err)
+		return solution
+	}
+
+	for _, line := range lines {
+		slice := strings.Split(line, "   ")
+
+		t, err := strconv.Atoi(slice[0])
+		if err == nil {
+			left = append(left, t)
+		}
+
+		t, err = strconv.Atoi(slice[1])
+		if err == nil {
+			right = append(right, t)
+		}
+	}
+
+	for _, leftItem := range left {
+		count := 0
+		for _, rightItem := range right {
+			if leftItem == rightItem {
+				count++
+			}
+		}
+
+		solution += leftItem * count
+
 	}
 
 	return solution
