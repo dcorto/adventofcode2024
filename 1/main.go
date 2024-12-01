@@ -2,6 +2,10 @@ package main
 
 import (
 	"fmt"
+	"math"
+	"sort"
+	"strconv"
+	"strings"
 	"utils"
 )
 
@@ -12,7 +16,11 @@ func main() {
 }
 
 func solutionA() int {
-	var solution int = -1
+	var solution int = 0
+
+	var left []int
+	var right []int
+
 	lines, err := utils.ReadLinesFromFile("1/a.txt")
 	if err != nil {
 		fmt.Println("Error:", err)
@@ -20,7 +28,26 @@ func solutionA() int {
 	}
 
 	for _, line := range lines {
-		fmt.Println(line)
+		slice := strings.Split(line, "   ")
+
+		t, err := strconv.Atoi(slice[0])
+		if err == nil {
+			left = append(left, t)
+		}
+
+		t, err = strconv.Atoi(slice[1])
+		if err == nil {
+			right = append(right, t)
+		}
+	}
+
+	sort.Ints(left)
+	sort.Ints(right)
+
+	for i, leftItem := range left {
+		rightItem := right[i]
+		dist := int(math.Abs(float64(leftItem) - float64(rightItem)))
+		solution += dist
 	}
 
 	return solution
