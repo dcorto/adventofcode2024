@@ -19,5 +19,5 @@ Each day have two parts (A and B)
 | **Day**                                  | **Solution**                                                             |
 |------------------------------------------|--------------------------------------------------------------------------|
 | [1](https://adventofcode.com/2024/day/1) | [Link](https://github.com/dcorto/adventofcode2024/blob/master/1/main.go) |
-| 2                                        | .                                                                        |
+| [2](https://adventofcode.com/2024/day/2) | [Link](https://github.com/dcorto/adventofcode2024/blob/master/2/main.go) |                                                                        |
 
