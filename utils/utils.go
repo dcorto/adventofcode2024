@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 )
 
 func ReadLinesFromFile(path string) ([]string, error) {
@@ -32,4 +33,17 @@ func ReadLinesFromFile(path string) ([]string, error) {
 	}
 
 	return lines, nil
+}
+
+func SliceFromStringToInt(slice []string) ([]int, error) {
+	var intSlice []int
+	for _, s := range slice {
+		i, err := strconv.Atoi(s)
+		if err != nil {
+			fmt.Println("Error:", err)
+			return nil, err
+		}
+		intSlice = append(intSlice, i)
+	}
+	return intSlice, nil
 }
