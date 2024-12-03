@@ -41,6 +41,19 @@ func solutionA() int {
 
 func solutionB() int {
 	var solution = 0
+	var isActive = true
+	lines, _ := utils.ReadLinesFromFile(fmt.Sprintf("%d/b.txt", day))
+
+	for _, line := range lines {
+		result, err := extractOnlyEnabledAndValidMultiplicationValueFromLine(line, &isActive)
+		fmt.Println("line")
+		if err != nil {
+			fmt.Println("Error:", err)
+			return solution
+		}
+		solution += result
+	}
+
 	return solution
 }
 
@@ -60,6 +73,40 @@ func extractValidMultiplicationValueFromLine(line string) (int, error) {
 		}
 
 		result += op1 * op2
+	}
+
+	return result, nil
+}
+
+func extractOnlyEnabledAndValidMultiplicationValueFromLine(line string, isActive *bool) (int, error) {
+	var result = 0
+	regex := regexp.MustCompile(`mul\((\d{1,3}),(\d{1,3})\)|do\(\)|don't\(\)`)
+	matches := regex.FindAllStringSubmatch(line, -1)
+
+	for _, match := range matches {
+
+		if match[0] == "do()" {
+			*isActive = true
+			continue
+		}
+
+		if match[0] == "don't()" {
+			*isActive = false
+			continue
+		}
+
+		if *isActive {
+			op1, err := strconv.Atoi(match[1])
+			if err != nil {
+				return result, err
+			}
+
+			op2, err := strconv.Atoi(match[2])
+			if err != nil {
+				return result, err
+			}
+			result += op1 * op2
+		}
 	}
 
 	return result, nil
