@@ -16,8 +16,8 @@ Each day have two parts (A and B)
 
 ## Solutions
 
-| **Day**                                  | **Solution**                                                             |
-|------------------------------------------|--------------------------------------------------------------------------|
-| [1](https://adventofcode.com/2024/day/1) | [Link](https://github.com/dcorto/adventofcode2024/blob/master/1/main.go) |
-| [2](https://adventofcode.com/2024/day/2) | [Link](https://github.com/dcorto/adventofcode2024/blob/master/2/main.go) |                                                                        |
-
+| **Day**                                                          | **Solution**                                                             |
+|------------------------------------------------------------------|--------------------------------------------------------------------------|
+| [Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1) | [Link](https://github.com/dcorto/adventofcode2024/blob/master/1/main.go) |
+| [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2)  | [Link](https://github.com/dcorto/adventofcode2024/blob/master/2/main.go) |                                                                      |
+| [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)  | [Link](https://github.com/dcorto/adventofcode2024/blob/master/3/main.go) |  
