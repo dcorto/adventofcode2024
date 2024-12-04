@@ -24,4 +24,12 @@ Each day have two parts (A and B)
 | [Day 4: Ceres Search](https://adventofcode.com/2024/day/4)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/4/main.go) |     
 
 
+## My Previous Years
+    
+[Advent of Code 2021](https://github.com/dcorto/adventofcode2021)
+
+[Advent of Code 2022](https://github.com/dcorto/adventofcode2022)
+
+[Advent of Code 2023](https://github.com/dcorto/adventofcode2023)
+
 
