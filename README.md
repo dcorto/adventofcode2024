@@ -20,4 +20,8 @@ Each day have two parts (A and B)
 |------------------------------------------------------------------|--------------------------------------------------------------------------|
 | [Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1) | [Link](https://github.com/dcorto/adventofcode2024/blob/master/1/main.go) |
 | [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2)  | [Link](https://github.com/dcorto/adventofcode2024/blob/master/2/main.go) |                                                                      |
-| [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)  | [Link](https://github.com/dcorto/adventofcode2024/blob/master/3/main.go) |  
+| [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/3/main.go) |
+| [Day 4: Ceres Search](https://adventofcode.com/2024/day/4)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/4/main.go) |     
+
+
+
