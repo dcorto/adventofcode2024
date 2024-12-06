@@ -48,7 +48,8 @@ func solutionA() int {
 	}
 
 	path := getPath(board)
-	return len(path)
+	solution = len(path)
+	return solution
 }
 
 func getPath(board [][]string) []Position {
@@ -102,7 +103,68 @@ func startPosition(board [][]string) Position {
 func solutionB() int {
 	var solution = 0
 
+	lines, err := utils.ReadLinesFromFile(fmt.Sprintf("%d/b.txt", day))
+	if err != nil {
+		fmt.Println("Error:", err)
+		return solution
+	}
+
+	board := make([][]string, 0)
+
+	for _, line := range lines {
+		board = append(board, strings.Split(line, ""))
+	}
+
+	solution = countLoopPositions(board, getPath(board))
 	return solution
+}
+
+func countLoopPositions(board [][]string, initialPath []Position) int {
+	start := startPosition(board)
+	count := 0
+	for _, pos := range initialPath {
+		if board[pos.y][pos.x] == "." {
+			board[pos.y][pos.x] = "#"
+			if hasLoop(board, start) {
+				count++
+			}
+			board[pos.y][pos.x] = "."
+		}
+	}
+	return count
+}
+
+func hasLoop(board [][]string, start Position) bool {
+	width := len(board[0])
+	height := len(board)
+	visited := make([]uint8, width*height)
+	pos := start
+	dir := 0 // up
+
+	for {
+		idx := pos.y*width + pos.x
+		dirBit := uint8(1 << dir)
+
+		if visited[idx]&dirBit != 0 {
+			return true
+		}
+		visited[idx] |= dirBit
+
+		nextPos := Position{
+			x: pos.x + directions[dir][0],
+			y: pos.y + directions[dir][1],
+		}
+
+		if isGuardOutsideBoard(nextPos, width, height) {
+			return false
+		}
+
+		if board[nextPos.y][nextPos.x] == "#" {
+			dir = (dir + 1) & 3
+		} else {
+			pos = nextPos
+		}
+	}
 }
 
 // printBoard only for debug purposes
