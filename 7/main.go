@@ -14,8 +14,6 @@ type Equation struct {
 	operators []int
 }
 
-var operators = []string{"+", "*"}
-
 func main() {
 	fmt.Println("Solution for Day", day)
 
@@ -91,36 +89,3 @@ func solutionB() int {
 
 	return solution
 }
-
-/*
-
-res := 0
-	for _, eq := range equations {
-		numOperators := len(eq.operators) - 1
-		pow := 1 << numOperators
-		for try := 0; try < pow; try++ {
-			result := eq.operators[0]
-
-			for p := 0; p < numOperators; p++ {
-				if result > eq.result {
-					break
-				}
-				pthBit := (1 << p) & try
-				if pthBit == 0 {
-					result += eq.operators[p+1]
-				} else {
-					result *= eq.operators[p+1]
-				}
-			}
-
-			if result == eq.result {
-				res += eq.result
-				break
-			}
-		}
-	}
-
-	return res
-
-
-*/
