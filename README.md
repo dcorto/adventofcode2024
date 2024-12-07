@@ -23,7 +23,8 @@ Each day have two parts (A and B)
 | [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/3/main.go) |
 | [Day 4: Ceres Search](https://adventofcode.com/2024/day/4)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/4/main.go) |     
 | [Day 5: Print Queue](https://adventofcode.com/2024/day/5)        | [Link](https://github.com/dcorto/adventofcode2024/blob/master/5/main.go) |
-| [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6)        | [Link](https://github.com/dcorto/adventofcode2024/blob/master/6/main.go) |
+| [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6)    | [Link](https://github.com/dcorto/adventofcode2024/blob/master/6/main.go) |
+| [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7)      | [Link](https://github.com/dcorto/adventofcode2024/blob/master/7/main.go) |
 
 
 ## My Previous Years

@@ -1,4 +1,4 @@
-DAYS = "1" "2" "3" "4" "5" "6"
+DAYS = "1" "2" "3" "4" "5" "6" "7"
 
 run-day:
 	go run $(day)/main.go
