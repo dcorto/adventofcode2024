@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 	"strings"
 	"utils"
@@ -64,6 +65,50 @@ func solutionA() int {
 	return solution
 }
 
+func solutionB() int {
+	var solution = 0
+
+	lines, err := utils.ReadLinesFromFile(fmt.Sprintf("%d/b.txt", day))
+	if err != nil {
+		fmt.Println("Error:", err)
+		return solution
+	}
+
+	equations := generateEquations(lines)
+
+	for _, eq := range equations {
+		numOperators := len(eq.operators) - 1
+		numberOfCombinations := int(math.Pow(3, float64(numOperators)))
+
+		for i := 0; i < numberOfCombinations; i++ {
+			try := i
+			result := eq.operators[0]
+			for j := 0; j < numOperators; j++ {
+				operator := try % 3
+				if result > eq.result {
+					break
+				}
+				if operator == 0 {
+					result += eq.operators[j+1]
+				} else if operator == 1 {
+					result *= eq.operators[j+1]
+				} else {
+					numDigits := int(math.Log10(float64(eq.operators[j+1]))) + 1
+					result = result*int(math.Pow(10, float64(numDigits))) + eq.operators[j+1]
+				}
+				try = try / 3
+			}
+
+			if result == eq.result {
+				solution += eq.result
+				break
+			}
+		}
+	}
+
+	return solution
+}
+
 func generateEquations(lines []string) []Equation {
 	var equations []Equation
 
@@ -76,16 +121,4 @@ func generateEquations(lines []string) []Equation {
 	}
 
 	return equations
-}
-
-func solutionB() int {
-	var solution = 0
-
-	_, err := utils.ReadLinesFromFile(fmt.Sprintf("%d/b.txt", day))
-	if err != nil {
-		fmt.Println("Error:", err)
-		return solution
-	}
-
-	return solution
 }
