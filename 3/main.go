@@ -46,7 +46,6 @@ func solutionB() int {
 
 	for _, line := range lines {
 		result, err := extractOnlyEnabledAndValidMultiplicationValueFromLine(line, &isActive)
-		fmt.Println("line")
 		if err != nil {
 			fmt.Println("Error:", err)
 			return solution
