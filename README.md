@@ -26,6 +26,8 @@ Each day have two parts (A and B)
 | [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/6/main.go) |
 | [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7)         | [Link](https://github.com/dcorto/adventofcode2024/blob/master/7/main.go) |
 | [Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8) | [Link](https://github.com/dcorto/adventofcode2024/blob/master/8/main.go) |
+| [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/9/main.go) |
+
 
 ## My Previous Years
     
