@@ -23,8 +23,8 @@ func main() {
 	solutionA := solutionA()
 	fmt.Println("Solution A:", solutionA)
 
-	//solutionB := solutionB()
-	//fmt.Println("Solution B:", solutionB)
+	solutionB := solutionB()
+	fmt.Println("Solution B:", solutionB)
 }
 
 func solutionA() int {
@@ -43,7 +43,7 @@ func solutionA() int {
 	}
 
 	for _, trailhead := range findTrailheads(&grid) {
-		solution += findTrails(&grid, trailhead)
+		solution += findTrails(&grid, trailhead, false)
 	}
 	return solution
 }
@@ -57,13 +57,20 @@ func solutionB() int {
 		return solution
 	}
 
-	fmt.Println(lines)
+	var grid [][]int
+	for _, line := range lines {
+		l, _ := utils.SliceFromStringToInt(strings.Split(line, ""))
+		grid = append(grid, l)
+	}
 
+	for _, trailhead := range findTrailheads(&grid) {
+		solution += findTrails(&grid, trailhead, true)
+	}
 	return solution
 }
 
 // findTrails finds all the possible trails given a trailhead
-func findTrails(grid *[][]int, trailhead point) int {
+func findTrails(grid *[][]int, trailhead point, uniquePaths bool) int {
 	trails := 0
 	visited := map[point]bool{}
 	paths := []point{trailhead}
@@ -74,7 +81,7 @@ func findTrails(grid *[][]int, trailhead point) int {
 	for len(paths) > 0 {
 		currentPoint, paths = paths[0], paths[1:]
 
-		if visited[currentPoint] {
+		if !uniquePaths && visited[currentPoint] {
 			continue
 		}
 
