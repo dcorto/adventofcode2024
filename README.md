@@ -29,12 +29,15 @@ Each day have two parts (A and B)
 | [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/9/main.go)  | I used this [solution](https://github.com/shraddhaag/aoc/blob/main/2024/day9/main.go) for the part B, i got stuck a lot of time, that solution save the day                                                                                                                                        |
 | [Day 10: Hoof It](https://adventofcode.com/2024/day/10)             | [Link](https://github.com/dcorto/adventofcode2024/blob/master/10/main.go) |                                                                                                                                                                                                                                                                                                    |
 | [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)   | [Link](https://github.com/dcorto/adventofcode2024/blob/master/11/main.go) | The first version for part A, I made using slices and for 25 iterations it was OK. For part B (75 iterations), it no longer worked, so in the end, I had to redo it using the recursive function 'blink' and storing previously calculated results with a map (cache) to avoid recalculating them. |
-
+| [Day 12: Garden Groups](https://adventofcode.com/2024/day/12)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/12/main.go) |                                                                                                                                                                                                                                                                                                    |
 
 ## My Previous Years
-    
-[Advent of Code 2021](https://github.com/dcorto/adventofcode2021)
+
+[Advent of Code 2023](https://github.com/dcorto/adventofcode2023)
 
 [Advent of Code 2022](https://github.com/dcorto/adventofcode2022)
 
-[Advent of Code 2023](https://github.com/dcorto/adventofcode2023)
+[Advent of Code 2021](https://github.com/dcorto/adventofcode2021)
+
+
+
