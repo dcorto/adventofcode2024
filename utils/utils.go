@@ -47,3 +47,16 @@ func SliceFromStringToInt(slice []string) ([]int, error) {
 	}
 	return intSlice, nil
 }
+
+func SliceFromStringToInt64(slice []string) ([]int64, error) {
+	var intSlice []int64
+	for _, s := range slice {
+		i, err := strconv.Atoi(s)
+		if err != nil {
+			fmt.Println("Error:", err)
+			return nil, err
+		}
+		intSlice = append(intSlice, int64(i))
+	}
+	return intSlice, nil
+}
