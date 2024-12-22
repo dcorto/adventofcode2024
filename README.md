@@ -1,20 +1,23 @@
-# Advent of Code | int y=2024;
+# 🎄 Advent of Code | int y=2024;
 
-[https://adventofcode.com/](https://adventofcode.com/)
+This repository contains my solutions for the [Advent of Code 2024](https://adventofcode.com/2024) challenges, implemented in **Go (Golang)**.
 
-Each day have two parts (A and B)
+## 🚀 Usage
 
-## Usage
+```bash
+    # Add your input.txt file in the folder of the day you want to run
 
-```
     # run specific day (x = number of day)
     $ make run-day day=x
     
     # run all days
     $ make run-all
+    
+    # Also you run directly using go:
+    $ go run <day>/main.go
 ```
 
-## Solutions
+## ⭐ Solutions
 
 | **Day**                                                                | **Solution**                                                              | **Comments**                                                                                                                                                                                                                                                                                       |
 |------------------------------------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,9 +42,15 @@ Each day have two parts (A and B)
 | [Day 19: Linen Layout](https://adventofcode.com/2024/day/19)           | [Link](https://github.com/dcorto/adventofcode2024/blob/master/19/main.go) |                                                                                                                                                                                                                                                                                                    |
 | [Day 20: Race Condition](https://adventofcode.com/2024/day/20)         | [Link](https://github.com/dcorto/adventofcode2024/blob/master/20/main.go) |                                                                                                                                                                                                                                                                                                    |
 | [Day 21: Keypad Conundrum](https://adventofcode.com/2024/day/21)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/21/main.go) |                                                                                                                                                                                                                                                                                                    |
-| [Day 22: Monkey Market](https://adventofcode.com/2024/day/22)       | [Link](https://github.com/dcorto/adventofcode2024/blob/master/22/main.go) |                                                                                                                                                                                                                                                                                                    |
+| [Day 22: Monkey Market](https://adventofcode.com/2024/day/22)          | [Link](https://github.com/dcorto/adventofcode2024/blob/master/22/main.go) |                                                                                                                                                                                                                                                                                                    |
 
-## My Previous Years
+## 📝 Notes
+
+- Each solution is designed to work with the input provided by the Advent of Code website.
+- Make sure to place the input file `input.txt` (if required) in the day folder.
+- I have not included my own input sets in the repository as [recommended](https://www.reddit.com/r/adventofcode/comments/e7khy8/comment/fa13hb9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) by one of the mods in the official subreddit.
+
+## 🔄 My Previous Years
 
 [Advent of Code 2023](https://github.com/dcorto/adventofcode2023)
 
@@ -49,5 +58,8 @@ Each day have two parts (A and B)
 
 [Advent of Code 2021](https://github.com/dcorto/adventofcode2021)
 
+---
+
+Happy coding and good luck with Advent of Code 2024! 🎉
 
 

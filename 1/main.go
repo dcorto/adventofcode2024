@@ -9,8 +9,10 @@ import (
 	"utils"
 )
 
+const day = 1
+
 func main() {
-	fmt.Println("Solution for Day 1")
+	fmt.Println("Solution for Day", day)
 
 	solutionA := solutionA()
 	fmt.Println("Solution A:", solutionA)
@@ -25,7 +27,7 @@ func solutionA() int {
 	var left []int
 	var right []int
 
-	lines, err := utils.ReadLinesFromFile("1/a.txt")
+	lines, err := utils.ReadLinesFromFile(fmt.Sprintf("%d/input.txt", day))
 	if err != nil {
 		fmt.Println("Error:", err)
 		return solution
@@ -63,7 +65,7 @@ func solutionB() int {
 	var left []int
 	var right []int
 
-	lines, err := utils.ReadLinesFromFile("1/b.txt")
+	lines, err := utils.ReadLinesFromFile(fmt.Sprintf("%d/input.txt", day))
 	if err != nil {
 		fmt.Println("Error:", err)
 		return solution

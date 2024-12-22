@@ -21,7 +21,7 @@ func main() {
 
 func solutionA() int {
 	var solution = 0
-	lines, err := utils.ReadLinesFromFile(fmt.Sprintf("%d/a.txt", day))
+	lines, err := utils.ReadLinesFromFile(fmt.Sprintf("%d/input.txt", day))
 	if err != nil {
 		fmt.Println("Error:", err)
 		return solution
@@ -42,7 +42,7 @@ func solutionA() int {
 func solutionB() int {
 	var solution = 0
 	var isActive = true
-	lines, _ := utils.ReadLinesFromFile(fmt.Sprintf("%d/b.txt", day))
+	lines, _ := utils.ReadLinesFromFile(fmt.Sprintf("%d/input.txt", day))
 
 	for _, line := range lines {
 		result, err := extractOnlyEnabledAndValidMultiplicationValueFromLine(line, &isActive)
