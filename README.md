@@ -1,3 +1,5 @@
+# ⚠️ Moved to meta repository [dcorto/adventofcode](https://github.com/dcorto/adventofcode/tree/master/2024) ⚠️
+
 # 🎄 Advent of Code | int y=2024;
 
 This repository contains my solutions for the [Advent of Code 2024](https://adventofcode.com/2024) challenges, implemented in **Go (Golang)**.
