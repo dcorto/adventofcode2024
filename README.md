@@ -1,4 +1,4 @@
-# ⚠️ Moved to meta repository [dcorto/adventofcode](https://github.com/dcorto/adventofcode/tree/master/2024) ⚠️
+# ⚠️ Moved to meta repository [dcorto/adventofcode](https://github.com/dcorto/adventofcode/tree/master/2024)
 
 # 🎄 Advent of Code | int y=2024;
 
